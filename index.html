@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTD Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .frame {
+            width: 500px;  /* Set the width to 72px */
+            height: 550px;  /* Set the height to 450px */
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  /* Center content vertically */
+            align-items: center;  /* Center content horizontally */
+        }
+
+        .frame h3 {
+            font-size: 14px;  /* Adjust the font size for better fitting */
+            color: #4CAF50;
+            margin: 0 0 10px 0;  /* Reduce margin to fit better */
+        }
+
+        .frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .frame button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .frame button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>MTD Reports</h1>
+
+    <div class="container">
+
+
+        <!-- Frame 2 -->
+        <div class="frame">
+            
+            <img src="Report-Ops/Image1.JPEG" alt="MTD APR'25 CD Image" id="imageBox2">
+        </div>
+
+        <!-- Frame 3 -->
+        <div class="frame">
+          
+            <img src="Report-Ops/Image2.JPEG" alt="4th APR'25 CD Image" id="imageBox3">
+        </div>
+
+        <!-- Frame 4 -->
+        <div class="frame">
+            
+            <img src="Report-Ops/Image4.JPEG" alt="MTD APR'25 CDQA Image" id="imageBox4">
+        </div>
+
+        <!-- Frame 5 -->
+        <div class="frame">
+           
+            <img src="Report-Ops/Image5.JPEG" alt="4th APR'25 CDQA Image" id="imageBox5">
+        </div>
+
+        <!-- Frame 6 -->
+        <div class="frame">
+            
+            <img src="Report-Ops/Image6.JPEG" alt="4th APR'25 CD-GMC Image" id="imageBox6">
+        </div>
+
+        <!-- Frame 7 -->
+        <div class="frame">
+           
+            <img src="Report-Ops/Image7.JPEG" alt="4th APR'25 CD-JLR Image" id="imageBox7">
+        </div>
+
+        <!-- Frame 8 -->
+        <div class="frame">
+            <h3>MTD APR'25 Disposition</h3>
+            <img src="Report-Ops/Image8.JPEG" alt="MTD APR'25 Disposition Image" id="imageBox8">
+        </div>
+
+        <!-- Frame 9 -->
+        <div class="frame">
+            <h3>MTD APR'25 Disposition</h3>
+            <img src="Report-Ops/Image3.JPEG" alt="MTD APR'25 Disposition Image" id="imageBox9">
+        </div>
+    </div>
+
+    <!-- Button to download the report -->
+    <div style="text-align: center; margin-top: 30px;">
+        <button onclick="downloadFile()">Download Report</button>
+    </div>
+
+    <script>
+        // Function to trigger the download of the report
+        function downloadFile() {
+            const downloadLink = document.createElement('a');
+            downloadLink.href = 'Report-Ops/Report.xlsx';  // Relative file path
+            downloadLink.download = 'Report.xlsx'; // File name for the downloaded file
+            downloadLink.click();  // Simulate a click on the download link to start the download
+        }
+    </script>
+    
+</body>
+</html>
